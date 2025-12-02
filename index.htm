@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fity - Your AI Fitness Coach</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .gradient-bg { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .gradient-text { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Header -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold gradient-text">Fity</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#features" class="text-gray-600 hover:text-gray-900">Features</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-gray-900">How It Works</a>
+                    <a href="aichatcoah.jsx" class="text-gray-600 hover:text-gray-900">AI Chat Coach</a>
+                    <a href="workoutgenerator.jsx" class="text-gray-600 hover:text-gray-900">Workout Genarater</a>
+                    
+                </div>
+                <button onclick="scrollToWaitlist()" class="bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
+                    Join Waitlist
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-20 gradient-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">
+                Your AI Fitness Coach,<br>Always in Your Pocket
+            </h1>
+            <p class="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+                Get personalized workouts, custom meal plans, and 24/7 coaching powered by AI. 
+                Achieve your fitness goals faster than ever.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToWaitlist()" class="bg-white text-purple-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition text-lg">
+                    🚀 Join Early Access
+                </button>
+                <button onclick="showDemo()" class="bg-purple-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-900 transition text-lg">
+                    ▶ Watch Demo
+                </button>
+            </div>
+            <div class="mt-12 flex justify-center gap-8 text-white">
+                <div>
+                    <div class="text-3xl font-bold">10K+</div>
+                    <div class="text-purple-200">Workouts Generated</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold">5K+</div>
+                    <div class="text-purple-200">Meal Plans Created</div>
+                </div>
+                <div>
+                    <div class="text-3xl font-bold">98%</div>
+                    <div class="text-purple-200">User Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-4">Powerful AI Features</h2>
+            <p class="text-gray-600 text-center mb-16 text-lg">Everything you need to transform your fitness journey</p>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🏋️</div>
+                    <h3 class="text-xl font-bold mb-3">AI Workout Generator</h3>
+                    <p class="text-gray-600">Custom workouts based on your goals, equipment, and fitness level. Adapts to your progress in real-time.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-green-50 to-teal-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🥗</div>
+                    <h3 class="text-xl font-bold mb-3">Smart Diet Plans</h3>
+                    <p class="text-gray-600">Personalized meal plans with Indian & global cuisines. Automatic calorie and macro tracking.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-pink-50 to-purple-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">💬</div>
+                    <h3 class="text-xl font-bold mb-3">24/7 AI Coach</h3>
+                    <p class="text-gray-600">Chat anytime for motivation, form tips, and guidance. Like having a personal trainer on demand.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🎥</div>
+                    <h3 class="text-xl font-bold mb-3">Video Library</h3>
+                    <p class="text-gray-600">200+ exercise videos with proper form demonstrations and follow-along workouts.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">📊</div>
+                    <h3 class="text-xl font-bold mb-3">Progress Tracking</h3>
+                    <p class="text-gray-600">Track weight, measurements, workouts, and nutrition. Visualize your transformation with charts.</p>
+                </div>
+                
+                <div class="bg-gradient-to-br from-yellow-50 to-orange-50 p-8 rounded-xl">
+                    <div class="text-4xl mb-4">🔥</div>
+                    <h3 class="text-xl font-bold mb-3">Streaks & Motivation</h3>
+                    <p class="text-gray-600">Build consistency with streak tracking, achievements, and community challenges.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-16">How Fity Works</h2>
+            
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold mb-2">Tell Us Your Goals</h3>
+                    <p class="text-gray-600">Share your fitness level, goals, and preferences in a 2-minute setup</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold mb-2">AI Creates Your Plan</h3>
+                    <p class="text-gray-600">Get personalized workouts and meal plans generated instantly by AI</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold mb-2">Train & Track</h3>
+                    <p class="text-gray-600">Follow your workouts, log meals, and chat with your AI coach anytime</p>
+                </div>
+                
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-purple-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold mb-2">See Results</h3>
+                    <p class="text-gray-600">Watch your progress as AI adapts your plan based on your performance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    
+
+    <!-- Waitlist Section -->
+    <section id="waitlist" class="py-20 gradient-bg">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold text-white mb-6">Join the Waitlist</h2>
+            <p class="text-xl text-purple-100 mb-8">Be among the first to experience AI-powered fitness coaching. Early members get 50% off for life!</p>
+            
+            <div class="bg-white rounded-xl p-8 shadow-2xl">
+                <div id="waitlistForm">
+                    <input type="text" id="nameInput" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 text-lg">
+                    <input type="email" id="emailInput" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-4 text-lg">
+                    <select id="goalSelect" class="w-full px-4 py-3 border border-gray-300 rounded-lg mb-6 text-lg">
+                        <option value="">Select Your Goal</option>
+                        <option value="weight-loss">Weight Loss</option>
+                        <option value="muscle-gain">Muscle Gain</option>
+                        <option value="get-fit">Get Fit</option>
+                        <option value="athletic">Athletic Performance</option>
+                    </select>
+                    <button onclick="submitWaitlist()" class="w-full bg-purple-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-purple-700 transition">
+                        🎉 Join Waitlist - Get 50% Off
+                    </button>
+                    <p class="text-sm text-gray-500 mt-4">🔒 Your information is safe. We'll only email you when Fity launches.</p>
+                </div>
+                <div id="successMessage" class="hidden">
+                    <div class="text-6xl mb-4">🎉</div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-2">You're on the list!</h3>
+                    <p class="text-gray-600">We'll email you as soon as Fity launches. Get ready to transform your fitness! 💪</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold mb-4 gradient-text">Fity</h3>
+                    <p class="text-gray-400">Your AI-powered fitness coach, always in your pocket.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#features" class="hover:text-white">Features</a></li>
+                        <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white">Download</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">About</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Legal</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms</a></li>
+                        <li><a href="#" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2024 Fity. All rights reserved. Made with 💜 for fitness enthusiasts.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function scrollToWaitlist() {
+            document.getElementById('waitlist').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function showDemo() {
+            alert('🎬 Demo video coming soon! Join the waitlist to be notified when it\'s ready.');
+        }
+
+        function submitWaitlist() {
+            const name = document.getElementById('nameInput').value;
+            const email = document.getElementById('emailInput').value;
+            const goal = document.getElementById('goalSelect').value;
+
+            if (!name || !email || !goal) {
+                alert('Please fill in all fields!');
+                return;
+            }
+
+            if (!email.includes('@')) {
+                alert('Please enter a valid email address!');
+                return;
+            }
+
+            // Hide form and show success message
+            document.getElementById('waitlistForm').classList.add('hidden');
+            document.getElementById('successMessage').classList.remove('hidden');
+
+            // In production, this would send data to your backend
+            console.log('Waitlist signup:', { name, email, goal });
+        }
+    </script>
+</body>
+</html>
